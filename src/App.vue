@@ -19,7 +19,16 @@
               <RouterLink class="nav-link" to="/">Home</RouterLink>
             </li>
             <li class="nav-item">
-              <RouterLink class="nav-link" to="/category">Categorys</RouterLink>
+              <RouterLink class="nav-link" to="/category">Categories</RouterLink>
+            </li>
+            <li class="nav-item">
+              <RouterLink class="nav-link" to="/state">States</RouterLink>
+            </li>
+            <li class="nav-item">
+              <RouterLink class="nav-link" to="/restaurant">Restaurants</RouterLink>
+            </li>
+            <li class="nav-item">
+              <RouterLink class="nav-link" to="/customer">Customers</RouterLink>
             </li>
           </ul>
           <span class="navbar-text">
