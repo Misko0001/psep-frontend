@@ -32,7 +32,7 @@ function updateFood() {
 </script>
 
 <template>
-    <div v-if="food">
+    <div v-if="food && categories && restaurants">
         <h3 class="h3">Edit food</h3>
         <div class="mb-3">
             <label for="id" class="form-label">Id:</label>
@@ -42,7 +42,7 @@ function updateFood() {
             <label for="name" class="form-label">Name:</label>
             <input type="text" class="form-control" id="name" v-model="food.foodName">
         </div>
-        <div class="mb-3" v-if="categories">
+        <div class="mb-3">
             <label for="category" class="form-label">Category:</label>
             <select class="form-select" v-model="food.foodCategoryId" id="categorie">
                 <option v-for="obj in categories" :value="obj.categoryId">
@@ -50,7 +50,7 @@ function updateFood() {
                 </option>
             </select>
         </div>
-        <div class="mb-3" v-if="restaurants">
+        <div class="mb-3">
             <label for="restaurant" class="form-label">Restaurant:</label>
             <select class="form-select" v-model="food.foodRestaurantId" id="restaurant">
                 <option v-for="obj in restaurants" :value="obj.restaurantId">

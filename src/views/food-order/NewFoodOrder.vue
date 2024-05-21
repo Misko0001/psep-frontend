@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import type { OrderModel } from '@/models/order.model';
 import type { FoodModel } from '@/models/food.model';
-import { OrderService } from '@/services/order.service';
 import { FoodOrderService } from '@/services/food-order.service';
 import { FoodService } from '@/services/food.service';
 import { ref } from 'vue';
@@ -13,13 +11,7 @@ const id = Number.parseInt(route.params.id as any);
 const foodOrder = ref<any>({
     foodOrderOrderId: id,
     foodOrderFoodId: 0,
-    foodOrderAmountId: 0
-});
-
-const orders = ref<OrderModel[]>();
-OrderService.getAllOrders().then(rsp => {
-    orders.value = rsp.data;
-    foodOrder.value.foodOrderOrderId = rsp.data[0].foodOrderOrderId;
+    foodOrderAmount: 1
 });
 
 const foods = ref<FoodModel[]>();
@@ -31,7 +23,7 @@ FoodService.getAllFoods().then(rsp => {
 function saveFoodOrder() {
     FoodOrderService.saveFoodOrder(foodOrder.value).then(rsp => {
         router.push({
-            path: '/food-order'
+            path: `/order/${id}/food-order`
         });
     });
 }
@@ -46,7 +38,7 @@ function saveFoodOrder() {
         </div>
         <div class="mb-3">
             <label for="food" class="form-label">Food:</label>
-            <select class="form-select" v-model="foodOrder.foodOrderFoodName" id="food">
+            <select class="form-select" v-model="foodOrder.foodOrderFoodId" id="food">
                 <option v-for="obj in foods" :value="obj.foodId">
                     {{ obj.foodName }}
                 </option>
@@ -56,7 +48,7 @@ function saveFoodOrder() {
             <label for="amount" class="form-label">Amount:</label>
             <input type="number" min="1" class="form-control" id="amount" v-model="foodOrder.foodOrderAmount">
         </div>
-        <RouterLink class="btn btn-danger mb-2" :to="`/food-order/order/${id}`">
+        <RouterLink class="btn btn-danger mb-2" :to="`/order/${id}/food-order`">
             <i class="fa-solid fa-arrow-left"></i> Back
         </RouterLink>
         <button class="btn btn-success mb-2 ms-2" @click="saveFoodOrder()">

@@ -11,9 +11,9 @@ const order = ref<any>({
     orderCustomerId: 0
 });
 
-const categories = ref<CustomerModel[]>();
+const customers = ref<CustomerModel[]>();
 CustomerService.getAllCustomers().then(rsp => {
-    categories.value = rsp.data;
+    customers.value = rsp.data;
     order.value.orderCustomerId = rsp.data[0].orderCustomerId;
 });
 
@@ -29,10 +29,10 @@ function saveOrder() {
 <template>
     <div v-if="order">
         <h3 class="h3">Create order</h3>
-        <div class="mb-3" v-if="categories">
+        <div class="mb-3" v-if="customers">
             <label for="customer" class="form-label">Customer:</label>
             <select class="form-select" v-model="order.orderCustomerId" id="categorie">
-                <option v-for="obj in categories" :value="obj.customerId">
+                <option v-for="obj in customers" :value="obj.customerId">
                     {{ obj.customerName }}
                 </option>
             </select>

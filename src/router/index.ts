@@ -20,6 +20,7 @@ import NewFood from '@/views/food/NewFood.vue'
 import EditFood from '@/views/food/EditFood.vue'
 import FoodOrderView from '@/views/food-order/FoodOrderView.vue'
 import NewFoodOrder from '@/views/food-order/NewFoodOrder.vue'
+import EditFoodOrder from '@/views/food-order/EditFoodOrder.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -120,15 +121,19 @@ const router = createRouter({
       component: EditOrder
     },
     {
-      path: '/food-order/order/:id',
+      path: '/order/:id/food-order',
       name: 'food-order',
       component: FoodOrderView
-    }
-    ,
+    },
     {
-      path: '/food-order/order/new/:id',
+      path: '/order/:id/food-order/new',
       name: 'new-food-order',
       component: NewFoodOrder
+    },
+    {
+      path: '/food-order/:id',
+      name: 'edit-food-order',
+      component: EditFoodOrder
     }
   ]
 })

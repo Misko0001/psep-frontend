@@ -18,6 +18,13 @@ async function removeFoodOrder(model: FoodOrderModel) {
 
 <template>
     <div v-if="foodOrders">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="/order">Orders</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{ String(id).padStart(4, '0') }}</li>
+            </ol>
+        </nav>
         <h3 class="h3">Order {{ id }}</h3>
         <table class="table">
             <thead>
@@ -53,7 +60,7 @@ async function removeFoodOrder(model: FoodOrderModel) {
         <RouterLink class="btn btn-danger mb-2" to="/order">
             <i class="fa-solid fa-arrow-left"></i> Back
         </RouterLink>
-        <RouterLink class="btn btn-success mb-2 ms-2" :to="`/food-order/order/new/${id}`">
+        <RouterLink class="btn btn-success mb-2 ms-2" :to="`/order/${id}/food-order/new`">
             <i class="fa-solid fa-plus"></i> Add to order
         </RouterLink>
     </div>
