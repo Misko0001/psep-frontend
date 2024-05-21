@@ -5,7 +5,7 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 const category = ref<any>({
-    name: ''
+    categoryName: ''
 });
 
 function saveCategory() {

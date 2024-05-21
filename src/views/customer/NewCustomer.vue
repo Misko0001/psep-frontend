@@ -5,10 +5,10 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 const customer = ref<any>({
-    name: '',
-    email: '',
-    phone: '',
-    address: ''
+    customerName: '',
+    customerEmail: '',
+    customerPhone: '',
+    customerAddress: ''
 });
 
 function saveCustomer() {

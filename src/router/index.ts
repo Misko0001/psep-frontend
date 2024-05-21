@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import CategoryView from '@/views/category/CategoryView.vue'
-import EditCategory from '@/views/category/EditCategory.vue'
 import NewCategory from '@/views/category/NewCategory.vue'
+import EditCategory from '@/views/category/EditCategory.vue'
 import StateView from '@/views/state/StateView.vue'
 import NewState from '@/views/state/NewState.vue'
 import EditState from '@/views/state/EditState.vue'
@@ -12,6 +12,14 @@ import EditRestaurant from '@/views/restaurant/EditRestaurant.vue'
 import CustomerView from '@/views/customer/CustomerView.vue'
 import NewCustomer from '@/views/customer/NewCustomer.vue'
 import EditCustomer from '@/views/customer/EditCustomer.vue'
+import OrderView from '@/views/order/OrderView.vue'
+import NewOrder from '@/views/order/NewOrder.vue'
+import EditOrder from '@/views/order/EditOrder.vue'
+import FoodView from '@/views/food/FoodView.vue'
+import NewFood from '@/views/food/NewFood.vue'
+import EditFood from '@/views/food/EditFood.vue'
+import FoodOrderView from '@/views/food-order/FoodOrderView.vue'
+import NewFoodOrder from '@/views/food-order/NewFoodOrder.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -80,6 +88,47 @@ const router = createRouter({
       path: '/customer/:id',
       name: 'edit-customer',
       component: EditCustomer
+    },
+    {
+      path: '/food',
+      name: 'food',
+      component: FoodView
+    },
+    {
+      path: '/food/new',
+      name: 'new-food',
+      component: NewFood
+    },
+    {
+      path: '/food/:id',
+      name: 'edit-food',
+      component: EditFood
+    },
+    {
+      path: '/order',
+      name: 'order',
+      component: OrderView
+    },
+    {
+      path: '/order/new',
+      name: 'new-order',
+      component: NewOrder
+    },
+    {
+      path: '/order/:id',
+      name: 'edit-order',
+      component: EditOrder
+    },
+    {
+      path: '/food-order/order/:id',
+      name: 'food-order',
+      component: FoodOrderView
+    }
+    ,
+    {
+      path: '/food-order/order/new/:id',
+      name: 'new-food-order',
+      component: NewFoodOrder
     }
   ]
 })

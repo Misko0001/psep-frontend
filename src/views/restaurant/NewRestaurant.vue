@@ -5,7 +5,7 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 const restaurant = ref<any>({
-    name: ''
+    restaurantName: ''
 });
 
 function saveRestaurant() {
