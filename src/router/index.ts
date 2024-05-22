@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 import CategoryView from '@/views/category/CategoryView.vue'
 import NewCategory from '@/views/category/NewCategory.vue'
 import EditCategory from '@/views/category/EditCategory.vue'
@@ -21,14 +20,19 @@ import EditFood from '@/views/food/EditFood.vue'
 import FoodOrderView from '@/views/food-order/FoodOrderView.vue'
 import NewFoodOrder from '@/views/food-order/NewFoodOrder.vue'
 import EditFoodOrder from '@/views/food-order/EditFoodOrder.vue'
+import LoginView from '@/views/LoginView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: HomeView
+      redirect: '/order'
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: LoginView
     },
     {
       path: '/category',

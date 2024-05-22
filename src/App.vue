@@ -1,5 +1,14 @@
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
+import { AuthService } from './services/auth.service';
 
+const router = useRouter();
+function logout() {
+  AuthService.clearAuth();
+  router.push({
+    path: '/login'
+  });
+}
 </script>
 
 <template>
@@ -13,10 +22,13 @@
           aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse mt-1" id="navbarText">
+        <div class="collapse navbar-collapse mt-1" id="navbarText" v-if="AuthService.hasAuth()">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <RouterLink class="nav-link" to="/">Home</RouterLink>
+              <RouterLink class="nav-link" to="/order">Orders</RouterLink>
+            </li>
+            <li class="nav-item">
+              <RouterLink class="nav-link" to="/customer">Customers</RouterLink>
             </li>
             <li class="nav-item">
               <RouterLink class="nav-link" to="/food">Food</RouterLink>
@@ -30,19 +42,12 @@
             <li class="nav-item">
               <RouterLink class="nav-link" to="/state">States</RouterLink>
             </li>
-            <li class="nav-item">
-              <RouterLink class="nav-link" to="/customer">Customers</RouterLink>
-            </li>
-            <li class="nav-item">
-              <RouterLink class="nav-link" to="/order">Orders</RouterLink>
-            </li>
           </ul>
-          <span class="navbar-text">
-            Korisnik 123
-          </span>
+          <button type="button" class="nav-link me-3" @click="logout">Logout</button>
+          <span class="navbar-text"><i class="fa-solid fa-user"></i> {{ AuthService.getUsername() }}</span>
         </div>
       </div>
     </nav>
-    <RouterView />
+    <RouterView ::key="$route.fullPath" />
   </div>
 </template>
