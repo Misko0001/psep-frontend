@@ -49,5 +49,12 @@ function logout() {
       </div>
     </nav>
     <RouterView ::key="$route.fullPath" />
+    <footer>
+      <p>Miloš Stanković</p>
+      <div>
+        <a href="https://github.com/Misko0001" target="_blank" class="text-body-secondary git-hub"><i class="fa-brands fa-github"></i></a>
+        <a href="" target="_blank" class="text-body-secondary"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </footer>
   </div>
 </template>

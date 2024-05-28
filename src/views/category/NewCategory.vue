@@ -18,7 +18,7 @@ function saveCategory() {
 </script>
 
 <template>
-    <div v-if="category">
+    <div v-if="category" class="new-edit">
         <h3 class="h3">Create category</h3>
         <div class="mb-3">
             <label for="name" class="form-label">Name:</label>

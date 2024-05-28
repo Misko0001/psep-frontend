@@ -32,7 +32,7 @@ function updateFood() {
 </script>
 
 <template>
-    <div v-if="food && categories && restaurants">
+    <div v-if="food && categories && restaurants" class="new-edit">
         <h3 class="h3">Edit food</h3>
         <div class="mb-3">
             <label for="id" class="form-label">Id:</label>

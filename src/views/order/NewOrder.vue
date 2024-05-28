@@ -27,7 +27,7 @@ function saveOrder() {
 </script>
 
 <template>
-    <div v-if="order">
+    <div v-if="order" class="new-edit">
         <h3 class="h3">Create order</h3>
         <div class="mb-3" v-if="customers">
             <label for="customer" class="form-label">Customer:</label>

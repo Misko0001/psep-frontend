@@ -36,7 +36,7 @@ function saveFood() {
 </script>
 
 <template>
-    <div v-if="food && categories && restaurants">
+    <div v-if="food && categories && restaurants" class="new-edit">
         <h3 class="h3">Create food</h3>
         <div class="mb-3">
             <label for="name" class="form-label">Name:</label>

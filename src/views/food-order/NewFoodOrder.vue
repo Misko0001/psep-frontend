@@ -30,7 +30,7 @@ function saveFoodOrder() {
 </script>
 
 <template>
-    <div v-if="foodOrder && foods">
+    <div v-if="foodOrder && foods" class="new-edit">
         <h3 class="h3">Add to order {{ id }}</h3>
         <div class="mb-3">
             <label for="order" class="form-label">Order:</label>

@@ -15,12 +15,6 @@ async function removeOrder(model: OrderModel) {
 
 <template>
     <div v-if="orders">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Orders</li>
-            </ol>
-        </nav>
         <h3 class="h3">Orders</h3>
         <RouterLink class="btn btn-sm btn-success mb-2" to="/order/new">
             <i class="fa-solid fa-plus"></i> Add new order

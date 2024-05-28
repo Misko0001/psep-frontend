@@ -18,7 +18,7 @@ function saveRestaurant() {
 </script>
 
 <template>
-    <div v-if="restaurant">
+    <div v-if="restaurant" class="new-edit">
         <h3 class="h3">Create restaurant</h3>
         <div class="mb-3">
             <label for="name" class="form-label">Name:</label>

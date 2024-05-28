@@ -1,0 +1,59 @@
+nav {
+    border-bottom: solid 1px #495057;
+    margin-bottom: 30px;
+}
+
+footer {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding-top: 10px;
+    border-top: solid 1px #495057;
+    font-size: 20px;
+}
+
+footer p {
+    font-size: 18px;
+}
+
+footer a {
+    font-size: 25px;
+}
+
+.git-hub {
+    margin-right: 10px;
+}
+
+form {
+    margin: auto !important;
+    width: 50% !important;
+    min-width: 500px;
+}
+
+.login-h3 {
+    text-align: center;
+}
+
+.login {
+    border: solid 1px #495057;
+    margin-top: 30px !important;
+    margin-bottom: 50px !important;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.login-btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.new-edit {
+    margin: auto !important;
+    width: 50% !important;
+    min-width: 500px;
+}
+
+.new-edit h3 {
+    text-align: center;
+}

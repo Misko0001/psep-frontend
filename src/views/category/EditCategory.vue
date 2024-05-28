@@ -22,7 +22,7 @@ function updateCategory() {
 </script>
 
 <template>
-    <div v-if="category">
+    <div v-if="category" class="new-edit">
         <h3 class="h3">Edit category</h3>
         <div class="mb-3">
             <label for="id" class="form-label">Id:</label>

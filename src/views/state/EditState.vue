@@ -22,7 +22,7 @@ function updateState() {
 </script>
 
 <template>
-    <div v-if="state">
+    <div v-if="state" class="new-edit">
         <h3 class="h3">Edit state</h3>
         <div class="mb-3">
             <label for="id" class="form-label">Id:</label>

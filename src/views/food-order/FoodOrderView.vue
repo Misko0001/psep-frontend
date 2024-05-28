@@ -18,13 +18,6 @@ async function removeFoodOrder(model: FoodOrderModel) {
 
 <template>
     <div v-if="foodOrders">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item"><a href="/order">Orders</a></li>
-                <li class="breadcrumb-item active" aria-current="page">{{ String(id).padStart(4, '0') }}</li>
-            </ol>
-        </nav>
         <h3 class="h3">Order {{ id }}</h3>
         <table class="table">
             <thead>

@@ -18,7 +18,7 @@ function saveState() {
 </script>
 
 <template>
-    <div v-if="state">
+    <div v-if="state" class="new-edit">
         <h3 class="h3">Create state</h3>
         <div class="mb-3">
             <label for="name" class="form-label">Name:</label>

@@ -22,7 +22,7 @@ function updateCustomer() {
 </script>
 
 <template>
-    <div v-if="customer">
+    <div v-if="customer" class="new-edit">
         <h3 class="h3">Edit customer</h3>
         <div class="mb-3">
             <label for="id" class="form-label">Id:</label>

@@ -22,8 +22,8 @@ async function doLogin() {
 </script>
 
 <template>
-    <h3 class="h3">Login</h3>
-    <form v-on:submit.prevent="doLogin">
+    <h3 class="h3 login-h3">Login</h3>
+    <form class="login" v-on:submit.prevent="doLogin">
         <div class="mb-3">
             <label for="username" class="form-label">Username:</label>
             <input type="text" class="form-control" id="username" v-model="username">
@@ -32,6 +32,6 @@ async function doLogin() {
             <label for="password" class="form-label">Password:</label>
             <input type="password" class="form-control" id="password" v-model="password">
         </div>
-        <button type="submit" class="btn btn-primary">Login</button>
+        <button type="submit" class="btn btn-primary login-btn">Login</button>
     </form>
 </template>

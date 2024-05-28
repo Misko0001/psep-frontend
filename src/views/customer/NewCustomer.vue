@@ -21,7 +21,7 @@ function saveCustomer() {
 </script>
 
 <template>
-    <div v-if="customer">
+    <div v-if="customer" class="new-edit">
         <h3 class="h3">Create customer</h3>
         <div class="mb-3">
             <label for="name" class="form-label">Name:</label>
